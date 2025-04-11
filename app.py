@@ -3,12 +3,12 @@ import pandas as pd
 import google.generativeai as genai
 
 # ===== 1. Setup Layout =====
-st.title("🧠 My Chatbot and Data Analysis App🖥️")
+st.title("My Chatbot and Data Analysis App")
 st.subheader("Upload your CSV and get AI insights!")
 
 # ===== 2. Load Gemini API Key =====
 try:
-    genai.configure(api_key=st.secrets["gemini_api_key"])
+    key = st.secrets["gemini_api_key"]
     genai.configure(api_key=key)
     model = genai.GenerativeModel("models/gemini-2.0-flash-lite")
     st.success("✅ Gemini API Key configured successfully.")
