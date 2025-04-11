@@ -8,8 +8,8 @@ st.subheader("Upload your CSV and get AI insights!")
 
 # ===== 2. Load Gemini API Key =====
 try:
-    key = st.secrets["AIzaSyBSDuEUoXD8Rr6bmTq7aZ4AU2KajwkKiVw"]
-    genai.configure(api_key=key)
+    genai.configure(api_key=st.secrets["gemini_api_key"])
+    genai.configure(api_key=AIzaSyBSDuEUoXD8Rr6bmTq7aZ4AU2KajwkKiVw)
     model = genai.GenerativeModel("models/gemini-2.0-flash-lite")
     st.success("✅ Gemini API Key configured successfully.")
 except Exception as e:
