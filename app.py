@@ -3,7 +3,7 @@ import pandas as pd
 import google.generativeai as genai
 
 # ===== 1. Setup Layout =====
-st.title("My Chatbot and Data Analysis App")
+st.title("🤖 DataWhisper | Let the Bot Read Your CSV")
 st.subheader("Upload your CSV and get AI insights!")
 
 # ===== 2. Load Gemini API Key =====
